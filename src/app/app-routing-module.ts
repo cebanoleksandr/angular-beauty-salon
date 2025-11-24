@@ -10,18 +10,32 @@ import { ServiceDetail } from './features/services/pages/service-detail/service-
 import { Settings } from './features/settings/pages/settings/settings';
 import { Profile } from './features/profile/pages/profile/profile';
 import { NotFound } from './features/not-found/pages/not-found/not-found';
+import { MainLayout as MainLayoutComponent } from './shared/components/layouts/main-layout/main-layout';
+import { AuthLayout as AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout';
 
 const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'login', component: Login },
-  { path: 'register', component: Register },
-  { path: 'contacts', component: Contacts },
-  { path: 'contacts/:id', component: Master },
-  { path: 'services', component: Services },
-  { path: 'services/:id', component: ServiceDetail },
-  { path: 'settings', component: Settings },
-  { path: 'profile/:id', component: Profile },
-  { path: '**', component: NotFound },
+  {
+    path: '',
+    component: AuthLayoutComponent,
+    children: [
+      { path: 'login', component: Login },
+      { path: 'register', component: Register },
+    ]
+  },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', component: Home },
+      { path: 'contacts', component: Contacts },
+      { path: 'contacts/:id', component: Master },
+      { path: 'services', component: Services },
+      { path: 'services/:id', component: ServiceDetail },
+      { path: 'settings', component: Settings },
+      { path: 'profile/:id', component: Profile },
+      { path: '**', component: NotFound },
+    ]
+  }
 ];
 
 @NgModule({

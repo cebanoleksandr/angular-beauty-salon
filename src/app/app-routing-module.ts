@@ -26,7 +26,7 @@ const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: Home },
+      { path: 'home', component: Home },
       { path: 'contacts', component: Contacts },
       { path: 'contacts/:id', component: Master },
       { path: 'services', component: Services },

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Sidebar {
   sidebarItems = [
-    { title: 'Домашня', icon: 'heroHomeSolid', href: '/' },
+    { title: 'Домашня', icon: 'heroHomeSolid', href: '/home' },
     { title: 'Послуги', icon: 'heroSparklesSolid', href: '/services' },
     { title: 'Контакти', icon: 'heroPhoneSolid', href: '/contacts' },
     { title: 'Налаштування', icon: 'heroCog6ToothSolid', href: '/settings' },

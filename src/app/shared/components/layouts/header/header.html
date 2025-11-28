@@ -28,13 +28,13 @@
 
   <!-- Desktop logout button -->
   <div class="hidden md:flex items-center gap-8">
-    <button
-      class="bg-pink-600 text-white px-4 py-2 rounded flex items-center gap-2"
+    <app-button
+      mode="primary"
       (click)="isLogoutPopupVisible = true"
     >
       <ng-icon name="heroArrowRightStartOnRectangle" class="text-xl"></ng-icon>
-      Logout
-    </button>
+      Вийти
+    </app-button>
   </div>
 
   <!-- Popup -->

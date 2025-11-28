@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ISidebarItem } from '../../../models/sidebar.model';
 
 @Component({
   selector: 'app-sidebar-item',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './sidebar-item.css',
 })
 export class SidebarItem {
-  @Input() item!: { title: string; icon: string; href: string };
+  @Input() item!: ISidebarItem;
 }

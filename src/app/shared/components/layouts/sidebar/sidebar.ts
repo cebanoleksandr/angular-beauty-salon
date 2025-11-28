@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ISidebarItem } from '../../../models/sidebar.model';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.css',
 })
 export class Sidebar {
-  sidebarItems = [
+  sidebarItems: ISidebarItem[] = [
     { title: 'Домашня', icon: 'heroHomeSolid', href: '/home' },
     { title: 'Послуги', icon: 'heroSparklesSolid', href: '/services' },
     { title: 'Контакти', icon: 'heroPhoneSolid', href: '/contacts' },

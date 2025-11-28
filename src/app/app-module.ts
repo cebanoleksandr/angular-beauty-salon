@@ -2,8 +2,8 @@ import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { AuthLayoutModule } from './shared/components/layouts/auth-layout/auth-layout-module';
-import { MainLayoutModule } from './shared/components/layouts/main-layout/main-layout-module';
+import { SharedModule } from './shared/shared-module';
+import { FeaturesModule } from './features/features-module';
 
 @NgModule({
   declarations: [
@@ -12,8 +12,8 @@ import { MainLayoutModule } from './shared/components/layouts/main-layout/main-l
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthLayoutModule,
-    MainLayoutModule
+    SharedModule,
+    FeaturesModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

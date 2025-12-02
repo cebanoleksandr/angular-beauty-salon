@@ -11,6 +11,7 @@ import { Sidebar as SidebarComponent } from './components/layouts/sidebar/sideba
 import { SidebarItem } from './components/layouts/sidebar-item/sidebar-item';
 import { ButtonComponent } from './components/UI/button/button';
 import { InputComponent } from './components/UI/input/input';
+import { TextareaComponent } from './components/UI/textarea/textarea';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InputComponent } from './components/UI/input/input';
     AuthLayoutComponent,
     SidebarItem,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    TextareaComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ import { InputComponent } from './components/UI/input/input';
     AuthLayoutComponent,
     SidebarItem,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    TextareaComponent
   ]
 })
 export class SharedModule { }
